@@ -57,7 +57,27 @@ const transactionService = {
     await new Promise(resolve => setTimeout(resolve, 200))
     return transactions.filter(transaction => 
       transaction.category.toLowerCase() === category.toLowerCase()
-    ).sort((a, b) => new Date(b.date) - new Date(a.date))
+).sort((a, b) => new Date(b.date) - new Date(a.date))
+  },
+
+  async importFromBank(bankTransactions) {
+    await new Promise(resolve => setTimeout(resolve, 500))
+    const importedTransactions = []
+    
+    for (const bankTx of bankTransactions) {
+      const maxId = Math.max(...transactions.map(t => t.Id), 0)
+      const newTransaction = {
+        ...bankTx,
+        Id: maxId + importedTransactions.length + 1,
+        date: bankTx.date || new Date().toISOString().split('T')[0],
+        imported: true,
+        importDate: new Date().toISOString()
+      }
+      transactions.push(newTransaction)
+      importedTransactions.push({ ...newTransaction })
+    }
+    
+    return importedTransactions
   }
 }
 

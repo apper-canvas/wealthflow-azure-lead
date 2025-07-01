@@ -5,15 +5,15 @@ import ApperIcon from '@/components/ApperIcon'
 const Sidebar = () => {
   const location = useLocation()
   
-  const navigation = [
+const navigation = [
     { name: 'Dashboard', href: '/', icon: 'LayoutDashboard' },
     { name: 'Transactions', href: '/transactions', icon: 'ArrowLeftRight' },
+    { name: 'Bank Sync', href: '/bank-sync', icon: 'Landmark' },
     { name: 'Budget', href: '/budget', icon: 'PieChart' },
     { name: 'Goals', href: '/goals', icon: 'Target' },
     { name: 'Bills', href: '/bills', icon: 'FileText' },
     { name: 'Reports', href: '/reports', icon: 'BarChart3' }
   ]
-
   return (
     <div className="hidden lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0">
       <div className="flex flex-col flex-grow bg-gradient-to-b from-primary-900 to-primary-800 overflow-y-auto">

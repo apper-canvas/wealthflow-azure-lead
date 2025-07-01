@@ -1,0 +1,94 @@
+[
+  {
+    "Id": 1,
+    "bankName": "Chase Bank",
+    "accountName": "Chase Checking",
+    "accountNumber": "****1234",
+    "accountType": "checking",
+    "balance": 5420.50,
+    "isConnected": true,
+    "lastSync": "2024-01-15T10:30:00Z",
+    "syncStatus": "success",
+    "syncInterval": "daily",
+    "autoSync": true,
+    "errorMessage": null,
+    "credentials": {
+      "username": "user@example.com",
+      "encryptedPassword": "encrypted_pass_123"
+    },
+    "syncSettings": {
+      "importCategories": true,
+      "importPending": false,
+      "dateRange": 30
+    }
+  },
+  {
+    "Id": 2,
+    "bankName": "Bank of America",
+    "accountName": "BOA Savings",
+    "accountNumber": "****5678",
+    "accountType": "savings",
+    "balance": 12500.00,
+    "isConnected": true,
+    "lastSync": "2024-01-15T08:15:00Z",
+    "syncStatus": "success",
+    "syncInterval": "weekly",
+    "autoSync": true,
+    "errorMessage": null,
+    "credentials": {
+      "username": "john.doe@email.com",
+      "encryptedPassword": "encrypted_pass_456"
+    },
+    "syncSettings": {
+      "importCategories": true,
+      "importPending": true,
+      "dateRange": 60
+    }
+  },
+  {
+    "Id": 3,
+    "bankName": "Wells Fargo",
+    "accountName": "Wells Credit Card",
+    "accountNumber": "****9012",
+    "accountType": "credit",
+    "balance": -850.25,
+    "isConnected": false,
+    "lastSync": "2024-01-10T14:20:00Z",
+    "syncStatus": "error",
+    "syncInterval": "daily",
+    "autoSync": false,
+    "errorMessage": "Authentication failed. Please update credentials.",
+    "credentials": {
+      "username": "user123",
+      "encryptedPassword": "encrypted_pass_789"
+    },
+    "syncSettings": {
+      "importCategories": false,
+      "importPending": false,
+      "dateRange": 90
+    }
+  },
+  {
+    "Id": 4,
+    "bankName": "Capital One",
+    "accountName": "Capital One 360",
+    "accountNumber": "****3456",
+    "accountType": "checking",
+    "balance": 3200.75,
+    "isConnected": true,
+    "lastSync": "2024-01-14T16:45:00Z",
+    "syncStatus": "syncing",
+    "syncInterval": "daily",
+    "autoSync": true,
+    "errorMessage": null,
+    "credentials": {
+      "username": "cap1user@email.com",
+      "encryptedPassword": "encrypted_pass_101"
+    },
+    "syncSettings": {
+      "importCategories": true,
+      "importPending": true,
+      "dateRange": 45
+    }
+  }
+]
