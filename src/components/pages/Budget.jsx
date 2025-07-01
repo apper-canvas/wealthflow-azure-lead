@@ -8,9 +8,9 @@ import Loading from '@/components/ui/Loading'
 import Error from '@/components/ui/Error'
 import Empty from '@/components/ui/Empty'
 import ApperIcon from '@/components/ApperIcon'
+import BudgetVarianceAnalysis from '@/components/organisms/BudgetVarianceAnalysis'
 import budgetService from '@/services/api/budgetService'
 import transactionService from '@/services/api/transactionService'
-
 const Budget = () => {
   const [budgets, setBudgets] = useState([])
   const [transactions, setTransactions] = useState([])
@@ -240,8 +240,18 @@ const Budget = () => {
             })}
           </p>
         </div>
-      </div>
+</div>
 
+      {/* Budget Variance Analysis */}
+      {Object.keys(categoryBudgets).length > 0 && (
+        <BudgetVarianceAnalysis
+          budgets={budgets}
+          transactions={transactions}
+          selectedMonth={selectedMonth}
+          loading={false}
+          error={null}
+        />
+      )}
       {/* Budget Categories */}
       {Object.keys(categoryBudgets).length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
