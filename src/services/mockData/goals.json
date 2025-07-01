@@ -1,0 +1,30 @@
+[
+  {
+    "Id": 1,
+    "name": "Emergency Fund",
+    "targetAmount": 10000,
+    "currentAmount": 6500,
+    "targetDate": "2024-12-31"
+  },
+  {
+    "Id": 2,
+    "name": "Vacation to Europe",
+    "targetAmount": 5000,
+    "currentAmount": 2300,
+    "targetDate": "2024-08-15"
+  },
+  {
+    "Id": 3,
+    "name": "New Car Down Payment",
+    "targetAmount": 8000,
+    "currentAmount": 3200,
+    "targetDate": "2024-10-01"
+  },
+  {
+    "Id": 4,
+    "name": "Home Renovation",
+    "targetAmount": 15000,
+    "currentAmount": 4500,
+    "targetDate": "2025-03-15"
+  }
+]

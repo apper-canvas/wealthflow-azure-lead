@@ -1,0 +1,32 @@
+[
+  {
+    "Id": 1,
+    "month": "2024-01",
+    "categories": {
+      "Rent": 1200,
+      "Groceries": 600,
+      "Transportation": 300,
+      "Entertainment": 200,
+      "Utilities": 150,
+      "Healthcare": 200,
+      "Shopping": 400,
+      "Subscriptions": 100
+    },
+    "totalLimit": 3150
+  },
+  {
+    "Id": 2,
+    "month": "2024-02",
+    "categories": {
+      "Rent": 1200,
+      "Groceries": 650,
+      "Transportation": 350,
+      "Entertainment": 250,
+      "Utilities": 150,
+      "Healthcare": 200,
+      "Shopping": 300,
+      "Subscriptions": 100
+    },
+    "totalLimit": 3200
+  }
+]

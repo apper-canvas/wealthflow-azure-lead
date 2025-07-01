@@ -1,0 +1,66 @@
+[
+  {
+    "Id": 1,
+    "name": "Rent",
+    "amount": 1200,
+    "dueDate": "2024-02-01",
+    "status": "paid",
+    "recurring": true
+  },
+  {
+    "Id": 2,
+    "name": "Electricity",
+    "amount": 89,
+    "dueDate": "2024-02-15",
+    "status": "pending",
+    "recurring": true
+  },
+  {
+    "Id": 3,
+    "name": "Internet",
+    "amount": 65,
+    "dueDate": "2024-02-20",
+    "status": "pending",
+    "recurring": true
+  },
+  {
+    "Id": 4,
+    "name": "Phone",
+    "amount": 45,
+    "dueDate": "2024-02-25",
+    "status": "pending",
+    "recurring": true
+  },
+  {
+    "Id": 5,
+    "name": "Car Insurance",
+    "amount": 150,
+    "dueDate": "2024-02-28",
+    "status": "pending",
+    "recurring": true
+  },
+  {
+    "Id": 6,
+    "name": "Credit Card",
+    "amount": 280,
+    "dueDate": "2024-02-10",
+    "status": "overdue",
+    "recurring": true
+  },
+  {
+    "Id": 7,
+    "name": "Water Bill",
+    "amount": 35,
+    "dueDate": "2024-02-12",
+    "status": "pending",
+    "recurring": true
+  },
+  {
+    "Id": 8,
+    "name": "Netflix",
+    "amount": 15,
+    "dueDate": "2024-02-05",
+    "status": "paid",
+    "recurring": true
+  }
+]

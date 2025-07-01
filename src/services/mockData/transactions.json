@@ -1,0 +1,137 @@
+[
+  {
+    "Id": 1,
+    "type": "income",
+    "amount": 5500,
+    "category": "Salary",
+    "description": "Monthly salary",
+    "date": "2024-01-01",
+    "recurring": true
+  },
+  {
+    "Id": 2,
+    "type": "expense",
+    "amount": 1200,
+    "category": "Rent",
+    "description": "Monthly rent payment",
+    "date": "2024-01-01",
+    "recurring": true
+  },
+  {
+    "Id": 3,
+    "type": "expense",
+    "amount": 450,
+    "category": "Groceries",
+    "description": "Weekly grocery shopping",
+    "date": "2024-01-02",
+    "recurring": false
+  },
+  {
+    "Id": 4,
+    "type": "expense",
+    "amount": 89,
+    "category": "Utilities",
+    "description": "Electricity bill",
+    "date": "2024-01-03",
+    "recurring": true
+  },
+  {
+    "Id": 5,
+    "type": "expense",
+    "amount": 75,
+    "category": "Transportation",
+    "description": "Gas for car",
+    "date": "2024-01-04",
+    "recurring": false
+  },
+  {
+    "Id": 6,
+    "type": "expense",
+    "amount": 120,
+    "category": "Entertainment",
+    "description": "Movie tickets and dinner",
+    "date": "2024-01-05",
+    "recurring": false
+  },
+  {
+    "Id": 7,
+    "type": "income",
+    "amount": 500,
+    "category": "Freelance",
+    "description": "Website development project",
+    "date": "2024-01-06",
+    "recurring": false
+  },
+  {
+    "Id": 8,
+    "type": "expense",
+    "amount": 45,
+    "category": "Subscriptions",
+    "description": "Netflix subscription",
+    "date": "2024-01-07",
+    "recurring": true
+  },
+  {
+    "Id": 9,
+    "type": "expense",
+    "amount": 200,
+    "category": "Healthcare",
+    "description": "Doctor visit",
+    "date": "2024-01-08",
+    "recurring": false
+  },
+  {
+    "Id": 10,
+    "type": "expense",
+    "amount": 300,
+    "category": "Shopping",
+    "description": "Clothing and accessories",
+    "date": "2024-01-09",
+    "recurring": false
+  },
+  {
+    "Id": 11,
+    "type": "expense",
+    "amount": 180,
+    "category": "Groceries",
+    "description": "Grocery shopping",
+    "date": "2024-01-10",
+    "recurring": false
+  },
+  {
+    "Id": 12,
+    "type": "income",
+    "amount": 5500,
+    "category": "Salary",
+    "description": "Monthly salary",
+    "date": "2024-02-01",
+    "recurring": true
+  },
+  {
+    "Id": 13,
+    "type": "expense",
+    "amount": 1200,
+    "category": "Rent",
+    "description": "Monthly rent payment",
+    "date": "2024-02-01",
+    "recurring": true
+  },
+  {
+    "Id": 14,
+    "type": "expense",
+    "amount": 250,
+    "category": "Groceries",
+    "description": "Grocery shopping",
+    "date": "2024-02-02",
+    "recurring": false
+  },
+  {
+    "Id": 15,
+    "type": "expense",
+    "amount": 95,
+    "category": "Utilities",
+    "description": "Water bill",
+    "date": "2024-02-03",
+    "recurring": true
+  }
+]
