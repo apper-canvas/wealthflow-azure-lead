@@ -1,0 +1,74 @@
+[
+  {
+    "Id": 1,
+    "name": "Monthly Salary",
+    "type": "income",
+    "amount": 5500,
+    "category": "Salary",
+    "description": "Monthly salary payment",
+    "frequency": "monthly"
+  },
+  {
+    "Id": 2,
+    "name": "Rent Payment",
+    "type": "expense",
+    "amount": 1200,
+    "category": "Rent",
+    "description": "Monthly rent payment",
+    "frequency": "monthly"
+  },
+  {
+    "Id": 3,
+    "name": "Electricity Bill",
+    "type": "expense",
+    "amount": 89,
+    "category": "Utilities",
+    "description": "Monthly electricity bill",
+    "frequency": "monthly"
+  },
+  {
+    "Id": 4,
+    "name": "Weekly Groceries",
+    "type": "expense",
+    "amount": 150,
+    "category": "Groceries",
+    "description": "Weekly grocery shopping",
+    "frequency": "weekly"
+  },
+  {
+    "Id": 5,
+    "name": "Netflix Subscription",
+    "type": "expense",
+    "amount": 15.99,
+    "category": "Subscriptions",
+    "description": "Netflix monthly subscription",
+    "frequency": "monthly"
+  },
+  {
+    "Id": 6,
+    "name": "Gas Fill-up",
+    "type": "expense",
+    "amount": 75,
+    "category": "Transportation",
+    "description": "Weekly gas for car",
+    "frequency": "weekly"
+  },
+  {
+    "Id": 7,
+    "name": "Freelance Project",
+    "type": "income",
+    "amount": 800,
+    "category": "Freelance",
+    "description": "Monthly freelance income",
+    "frequency": "monthly"
+  },
+  {
+    "Id": 8,
+    "name": "Phone Bill",
+    "type": "expense",
+    "amount": 65,
+    "category": "Utilities",
+    "description": "Monthly phone bill",
+    "frequency": "monthly"
+  }
+]
