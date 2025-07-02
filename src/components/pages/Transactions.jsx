@@ -10,6 +10,7 @@ import Loading from '@/components/ui/Loading'
 import Error from '@/components/ui/Error'
 import Empty from '@/components/ui/Empty'
 import ApperIcon from '@/components/ApperIcon'
+import ExportDialog from '@/components/molecules/ExportDialog'
 import transactionService from '@/services/api/transactionService'
 
 const Transactions = () => {
@@ -21,6 +22,7 @@ const Transactions = () => {
   const [filterCategory, setFilterCategory] = useState('')
   const [filterType, setFilterType] = useState('')
   const [showForm, setShowForm] = useState(false)
+  const [showExportDialog, setShowExportDialog] = useState(false)
   const [editingTransaction, setEditingTransaction] = useState(null)
   const [formData, setFormData] = useState({
     type: 'expense',
@@ -163,15 +165,25 @@ const Transactions = () => {
         <div>
           <h1 className="text-3xl font-bold gradient-text">Transactions</h1>
           <p className="text-gray-600 mt-1">Track your income and expenses</p>
-        </div>
+</div>
         
-        <Button
-          variant="primary"
-          icon="Plus"
-          onClick={() => setShowForm(true)}
-        >
-          Add Transaction
-        </Button>
+        <div className="flex items-center space-x-3">
+          <Button
+            variant="secondary"
+            icon="Download"
+            onClick={() => setShowExportDialog(true)}
+          >
+            Export
+          </Button>
+          
+          <Button
+            variant="primary"
+            icon="Plus"
+            onClick={() => setShowForm(true)}
+          >
+            Add Transaction
+          </Button>
+        </div>
       </div>
 
       {/* Summary Cards */}
@@ -405,8 +417,17 @@ const Transactions = () => {
               </form>
             </motion.div>
           </motion.div>
-        )}
+)}
       </AnimatePresence>
+
+      {/* Export Dialog */}
+      <ExportDialog
+        isOpen={showExportDialog}
+        onClose={() => setShowExportDialog(false)}
+        exportType="transactions"
+        data={{ transactions: filteredTransactions }}
+        title="Export Transactions"
+      />
     </div>
   )
 }

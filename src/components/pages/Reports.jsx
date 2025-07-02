@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { toast } from 'react-toastify'
 import ExpenseChart from '@/components/organisms/ExpenseChart'
 import IncomeExpenseChart from '@/components/organisms/IncomeExpenseChart'
 import Select from '@/components/atoms/Select'
@@ -8,6 +9,7 @@ import Loading from '@/components/ui/Loading'
 import Error from '@/components/ui/Error'
 import Empty from '@/components/ui/Empty'
 import ApperIcon from '@/components/ApperIcon'
+import ExportDialog from '@/components/molecules/ExportDialog'
 import transactionService from '@/services/api/transactionService'
 
 const Reports = () => {
@@ -16,6 +18,7 @@ const Reports = () => {
   const [error, setError] = useState('')
   const [dateRange, setDateRange] = useState('last-6-months')
   const [reportType, setReportType] = useState('overview')
+  const [showExportDialog, setShowExportDialog] = useState(false)
 
   const loadTransactions = async () => {
     try {
@@ -127,29 +130,6 @@ const Reports = () => {
     }
   }
 
-  const exportReport = () => {
-    const filteredTransactions = getFilteredTransactions()
-    const csvContent = [
-      ['Date', 'Type', 'Category', 'Description', 'Amount'],
-      ...filteredTransactions.map(t => [
-        t.date,
-        t.type,
-        t.category,
-        t.description,
-        t.amount
-      ])
-    ].map(row => row.join(',')).join('\n')
-
-    const blob = new Blob([csvContent], { type: 'text/csv' })
-    const url = window.URL.createObjectURL(blob)
-    const a = document.createElement('a')
-    a.href = url
-    a.download = `financial-report-${dateRange}-${new Date().toISOString().split('T')[0]}.csv`
-    document.body.appendChild(a)
-    a.click()
-    document.body.removeChild(a)
-    window.URL.revokeObjectURL(url)
-  }
 
   if (loading) return <Loading type="dashboard" />
   if (error) return <Error message={error} onRetry={loadTransactions} />
@@ -178,14 +158,14 @@ const Reports = () => {
               { value: 'last-6-months', label: 'Last 6 Months' },
               { value: 'last-year', label: 'Last Year' }
             ]}
-          />
+/>
           
           <Button
             variant="secondary"
             icon="Download"
-            onClick={exportReport}
+            onClick={() => setShowExportDialog(true)}
           >
-            Export CSV
+            Export Report
           </Button>
         </div>
       </div>
@@ -434,8 +414,21 @@ const Reports = () => {
               </div>
             </div>
           </div>
-        </div>
+</div>
       </motion.div>
+
+      {/* Export Dialog */}
+      <ExportDialog
+        isOpen={showExportDialog}
+        onClose={() => setShowExportDialog(false)}
+        exportType="financial-summary"
+        data={{
+          summary,
+          categoryData: expenseData,
+          monthlyData
+        }}
+        title="Export Financial Report"
+      />
     </div>
   )
 }
